@@ -16,6 +16,7 @@
 }
 
 body {
+    font-family: sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +47,10 @@ input {
 img {
     width: 50px;
     border-radius: 50%;
+}
+
+h3 {
+    font-weight: 400;
 }
 
 p {
@@ -80,7 +85,7 @@ p {
 
 .left {
     width: 35%;
-    border-right: 1px solid var(--boolz-secondary-dark);
+    border-right: 1px solid rgb(211, 211, 211);
 }
 
 .right {
