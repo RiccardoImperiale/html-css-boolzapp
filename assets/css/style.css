@@ -28,6 +28,10 @@ body {
             var(--boolz-secondary) 100%);
 }
 
+ul {
+    list-style: none;
+}
+
 /* Utilities */
 
 .container-lg {
@@ -37,7 +41,7 @@ body {
 }
 
 .message {
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem .8rem 1.5rem;
     border-radius: 1rem;
     width: 80%;
 }
@@ -79,13 +83,8 @@ body {
             & .chat {
                 background-color: rgb(158, 158, 158);
 
-                /* & .message.sent {
-                    background-color: #009688;
-                }
 
-                & .message.received {
-                    background-color: #dbdbdb;
-                } */
+
             }
 
             & .bottom {
@@ -133,6 +132,8 @@ body {
 .chats_list {
     height: 100%;
     overflow-x: hidden;
+    padding-right: 17px;
+    scrollbar-width: none;
 }
 
 /* Right styles ---------------------------------------------------> */
@@ -140,10 +141,22 @@ body {
 .chat {
     height: 100%;
     overflow-x: hidden;
+    scrollbar-width: none;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.message_top {
+    display: flex;
+    gap: .8rem;
+    font-size: 1.5rem;
+}
+
+.message_bottom {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .message.sent {
@@ -153,6 +166,44 @@ body {
 
 .message.received {
     background-color: white;
+}
+
+.hours {
+    position: relative;
+    left: .65rem;
+}
+
+.fa-angle-down {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hover effect */
+
+.message {
+    position: relative;
+}
+
+.message_options {
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 3rem;
+    right: 1.5rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+
+    & li {
+        text-align: center;
+        padding: .8rem 2rem;
+    }
+
+    & li:hover {
+        background-color: var(--boolz-secondary-lighter);
+    }
+}
+
+.fa-angle-down:hover+.message_options,.message_options:hover {
+    display: block;
 }
 
 .bottom {
@@ -186,7 +237,6 @@ body {
     .right {
         flex-grow: 1;
     }
-
 }
 
 @media screen and (max-width: 540px) {
@@ -194,5 +244,4 @@ body {
     .left {
         display: none;
     }
-
 }
