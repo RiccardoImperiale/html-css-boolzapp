@@ -39,7 +39,7 @@ body {
 /* Debug */
 
 .debug {
-    
+
     & .app {
         background-color: rgba(102, 51, 153, 0.348);
 
@@ -48,12 +48,23 @@ body {
 
             & .top {
                 background-color: rgba(59, 220, 23, 0.348);
+            }
 
+            & .banner {
+                background-color: rgba(0, 238, 255, 0.348);
+            }
+
+            & .search {
+                background-color: rgba(255, 0, 238, 0.348);
             }
         }
 
         & .right {
             background-color: rgba(220, 23, 30, 0.348);
+
+            & .top {
+                background-color: rgba(19, 79, 209, 0.348);
+            }
         }
 
     }
@@ -80,6 +91,15 @@ body {
     height: 70px;
 }
 
+.banner {
+    height: 80px;
+}
+
+.search {
+    height: 80px;
+    height: 50px;
+}
+
 /* Responsive */
 
 
@@ -95,11 +115,15 @@ body {
     .left {
         width: 82px;
     }
-    
+
+    .banner, .search {
+        display: none;
+    }
+
     .right {
         flex-grow: 1;
     }
-    
+
 }
 
 @media screen and (max-width: 540px) {
@@ -107,5 +131,5 @@ body {
     .left {
         display: none;
     }
-    
+
 }
