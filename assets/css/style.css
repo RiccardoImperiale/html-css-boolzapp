@@ -337,12 +337,12 @@ p {
         height: 100vh;
     }
 
-    .top {
+    .left .top {
         justify-content: center;
+    }
 
-        & .buttons {
-            display: none;
-        }
+    .left .buttons {
+        display: none;
     }
 
     .left {
