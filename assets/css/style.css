@@ -1,19 +1,31 @@
 :root {
-    --boolz-darker: #000000;
-    --boolz-lighter: #ffffff;
     --boolz-primary: #009688;
     --boolz-success: #D5F9BA;
     --boolz-info: #8EDAFC;
     --boolz-secondary-darker: #6B7376;
     --boolz-secondary-dark: #B1B1B1;
-    --boolz-secondary: #EAEAEA;
-    --boolz-secondary-light: #F3EEEA;
+    --boolz-secondary: #DBDBD3;
+    --boolz-secondary-light: #EAEAEA;
+    --boolz-secondary-lighter: #F3EEEA;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom,
+            var(--boolz-primary) 0%,
+            var(--boolz-primary) 10%,
+            var(--boolz-secondary) 10%,
+            var(--boolz-secondary) 100%);
 }
 
 /* Utilities */
@@ -27,5 +39,22 @@
 /* Debug */
 
 .debug {
+    
+    & .app {
+        background-color: rgba(102, 51, 153, 0.348);
+        width: 100%;
+        height: 90vh;
+    }
+
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 540px) {
+    
+}
+
+@media screen and (max-width: 991px) {
     
 }
