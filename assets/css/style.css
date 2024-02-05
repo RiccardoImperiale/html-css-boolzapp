@@ -36,7 +36,7 @@ input {
     width: 100%;
     height: 100%;
     border: 1px solid var(--boolz-secondary-lighter);
-    border-radius: .25rem;
+    border-radius: .4rem;
 }
 
 ::placeholder {
@@ -68,48 +68,6 @@ p {
 
 /* Debug */
 
-.debug {
-
-    & .app {
-        background-color: rgba(102, 51, 153, 0.348);
-
-        & .left {
-            /* background-color: rgba(23, 220, 217, 0.348); */
-
-            /* & .top {
-                background-color: rgba(59, 220, 23, 0.348);
-            } */
-
-            /* & .banner {
-                background-color: rgba(0, 238, 255, 0.348);
-            } */
-
-            /* & .search {
-                background-color: rgba(255, 0, 238, 0.348);
-            } */
-
-            /* & .chats_list {
-                background-color: rgba(255, 255, 0, 0.445);
-            } */
-        }
-
-        & .right {
-            /* background-color: rgba(220, 23, 30, 0.348); */
-
-            /* & .top {
-                background-color: rgba(19, 79, 209, 0.348);
-            } */
-
-            & .chat {
-                background-color: rgb(158, 158, 158);
-            }
-
-            & .bottom {
-                background-color: rgba(4, 22, 62, 0.337);
-            }
-        }
-    }
-}
 
 /* App styles ---------------------------------------------------> */
 
@@ -218,6 +176,7 @@ p {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--boolz-secondary-light);
+    cursor: pointer;
 
     & .hours {
         padding-top: 1.5rem;
@@ -239,7 +198,6 @@ p {
 .right p {
     color: var(--boolz-secondary-darker);
 }
-
 
 .chat {
     background-image: url('../img/mine.jpg');
@@ -323,7 +281,25 @@ p {
     width: 100%;
     position: absolute;
     bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--boolz-secondary-lighter);
+    padding: .5rem 0;
+
+    & input {
+        width: 80%;
+        padding-left: 1rem;
+    }
+
+    & i {
+        padding-inline: 2rem;
+        font-size: 1.5rem;
+        color: var(--boolz-secondary-darker);
+        cursor: pointer;
+    }
 }
+
 
 
 /* Responsive ---------------------------------------------------> */
