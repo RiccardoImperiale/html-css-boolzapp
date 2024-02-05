@@ -48,6 +48,10 @@ img {
     border-radius: 50%;
 }
 
+p {
+    font-size: .8rem;
+}
+
 /* Utilities */
 
 .container-lg {
@@ -215,23 +219,27 @@ img {
     justify-content: space-between;
     border-bottom: 1px solid var(--boolz-secondary-light);
 
-    & .contact {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-
-        & p {
-            font-size: .8rem;
-            color: var(--boolz-secondary-dark);
-        }
-    }
-
     & .hours {
         padding-top: 1.5rem;
     }
 }
 
 /* Right styles ---------------------------------------------------> */
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.left p {
+    color: var(--boolz-secondary-dark);
+}
+
+.right p {
+    color: var(--boolz-secondary-darker);
+}
+
 
 .chat {
     background-image: url('../img/mine.jpg');
