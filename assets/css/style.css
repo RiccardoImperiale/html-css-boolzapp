@@ -1,0 +1,31 @@
+:root {
+    --boolz-darker: #000000;
+    --boolz-lighter: #ffffff;
+    --boolz-primary: #009688;
+    --boolz-success: #D5F9BA;
+    --boolz-info: #8EDAFC;
+    --boolz-secondary-darker: #6B7376;
+    --boolz-secondary-dark: #B1B1B1;
+    --boolz-secondary: #EAEAEA;
+    --boolz-secondary-light: #F3EEEA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utilities */
+
+.container {
+    max-width: 1920px;
+    width: 80%;
+    margin: auto;
+}
+
+/* Debug */
+
+.debug {
+    
+}
