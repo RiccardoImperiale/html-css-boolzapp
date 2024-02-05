@@ -45,6 +45,11 @@ body {
 
         & .left {
             background-color: rgba(23, 220, 217, 0.348);
+
+            & .top {
+                background-color: rgba(59, 220, 23, 0.348);
+
+            }
         }
 
         & .right {
@@ -71,6 +76,9 @@ body {
     width: 65%;
 }
 
+.top {
+    height: 70px;
+}
 
 /* Responsive */
 
@@ -83,9 +91,21 @@ body {
     .app {
         height: 100vh;
     }
+
+    .left {
+        width: 82px;
+    }
+    
+    .right {
+        flex-grow: 1;
+    }
     
 }
 
 @media screen and (max-width: 540px) {
+
+    .left {
+        display: none;
+    }
     
 }
