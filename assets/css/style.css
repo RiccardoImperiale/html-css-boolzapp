@@ -34,7 +34,12 @@ body {
     max-width: 1920px;
     width: 80%;
     margin: auto;
+}
 
+.message {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 80%;
 }
 
 /* Debug */
@@ -72,7 +77,15 @@ body {
             }
 
             & .chat {
-                background-color: rgb(0, 81, 255);
+                background-color: rgb(158, 158, 158);
+
+                /* & .message.sent {
+                    background-color: #009688;
+                }
+
+                & .message.received {
+                    background-color: #dbdbdb;
+                } */
             }
 
             & .bottom {
@@ -102,6 +115,8 @@ body {
     position: relative;
 }
 
+/* Left styles ---------------------------------------------------> */
+
 .top {
     height: 70px;
 }
@@ -120,6 +135,26 @@ body {
     overflow-x: hidden;
 }
 
+/* Right styles ---------------------------------------------------> */
+
+.chat {
+    height: 100%;
+    overflow-x: hidden;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message.sent {
+    background-color: var(--boolz-success);
+    align-self: flex-end;
+}
+
+.message.received {
+    background-color: white;
+}
+
 .bottom {
     height: 70px;
     width: 100%;
@@ -127,14 +162,8 @@ body {
     bottom: 0;
 }
 
-.chat {
-    height: 100%;
-    overflow-x: hidden;
-}
 
-
-
-/* Responsive */
+/* Responsive ---------------------------------------------------> */
 
 @media screen and (max-width: 991px) {
     .container-md {
@@ -149,7 +178,8 @@ body {
         width: 82px;
     }
 
-    .banner, .search {
+    .banner,
+    .search {
         display: none;
     }
 
