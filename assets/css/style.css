@@ -70,10 +70,16 @@ body {
             & .top {
                 background-color: rgba(19, 79, 209, 0.348);
             }
+
+            & .chat {
+                background-color: rgb(0, 81, 255);
+            }
+
+            & .bottom {
+                background-color: rgba(4, 22, 62, 0.337);
+            }
         }
-
     }
-
 }
 
 /* App styles ---------------------------------------------------> */
@@ -93,6 +99,7 @@ body {
 .right {
     width: 65%;
     /* height: 100%; */
+    position: relative;
 }
 
 .top {
@@ -109,10 +116,23 @@ body {
 }
 
 .chats_list {
-    background-color: yellow;
     height: 100%;
     overflow-x: hidden;
 }
+
+.bottom {
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.chat {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
 
 /* Responsive */
 
