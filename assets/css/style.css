@@ -70,12 +70,6 @@ h3,
     margin: auto;
 }
 
-.message {
-    padding: 1.2rem 1.2rem .3rem 1.2rem;
-    border-radius: 1rem;
-    width: 60%;
-}
-
 /* Debug */
 
 
@@ -223,12 +217,20 @@ h3,
     gap: 1rem;
     scrollbar-width: thin;
 
+    .message {
+        padding: 1.2rem 1.2rem .3rem 1.2rem;
+        width: 60%;
+        position: relative;
+    }
+
     .message.sent {
+        border-radius: 1rem 0 1rem 1rem;
         background-color: var(--boolz-success);
         align-self: flex-end;
     }
-    
+
     .message.received {
+        border-radius: 0 1rem 1rem 1rem;
         background-color: white;
     }
 }
@@ -268,7 +270,7 @@ h3,
         display: none;
         background-color: white;
         position: absolute;
-        top: 1.2rem;
+        top: 1rem;
         right: 0;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
         z-index: 1;
