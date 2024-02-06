@@ -26,7 +26,7 @@ body {
             var(--boolz-primary) 0%,
             var(--boolz-primary) 12%,
             var(--boolz-secondary) 12%,
-            var(--boolz-secondary) 100%);
+            #D1D7DB 100%);
 }
 
 ul {
@@ -57,7 +57,8 @@ p {
     font-size: .8rem;
 }
 
-h3 , .text {
+h3,
+.text {
     color: rgb(39, 39, 39);
 }
 
@@ -88,15 +89,21 @@ h3 , .text {
 }
 
 .left {
-    /* width: 35%; */
     min-width: 380px;
     border-right: 1px solid rgb(211, 211, 211);
+
+    & p {
+        color: var(--boolz-secondary-dark);
+    }
 }
 
 .right {
-    /* width: 65%; */
     flex-grow: 1;
     position: relative;
+
+    & p {
+        color: var(--boolz-secondary-darker);
+    }
 }
 
 /* Left styles ---------------------------------------------------> */
@@ -142,17 +149,17 @@ h3 , .text {
         color: var(--boolz-secondary-darker);
         font-size: .9rem;
     }
-}
 
-.fa-bell-slash {
-    width: 50px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: white;
-    color: var(--boolz-info);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .fa-bell-slash {
+        width: 50px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: white;
+        color: var(--boolz-info);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .search {
@@ -189,15 +196,14 @@ h3 , .text {
     cursor: pointer;
     transition: background-color .25s;
 
+    &:hover {
+        background-color: var(--boolz-secondary-light);
+    }
+
     & .hours {
         padding-top: 1.5rem;
     }
 }
-
-.contact_chat:hover {
-    background-color: var(--boolz-secondary-light);
-}
-
 
 /* Right styles ---------------------------------------------------> */
 
@@ -205,14 +211,6 @@ h3 , .text {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.left p {
-    color: var(--boolz-secondary-dark);
-}
-
-.right p {
-    color: var(--boolz-secondary-darker);
 }
 
 .chat {
@@ -224,6 +222,15 @@ h3 , .text {
     flex-direction: column;
     gap: 1rem;
     scrollbar-width: thin;
+
+    .message.sent {
+        background-color: var(--boolz-success);
+        align-self: flex-end;
+    }
+    
+    .message.received {
+        background-color: white;
+    }
 }
 
 .message_top {
@@ -234,15 +241,6 @@ h3 , .text {
 .message_bottom {
     display: flex;
     justify-content: flex-end;
-}
-
-.message.sent {
-    background-color: var(--boolz-success);
-    align-self: flex-end;
-}
-
-.message.received {
-    background-color: white;
 }
 
 .fa-angle-down,
@@ -315,7 +313,6 @@ h3 , .text {
         cursor: pointer;
     }
 }
-
 
 /* Responsive ---------------------------------------------------> */
 
