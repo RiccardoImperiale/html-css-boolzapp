@@ -84,12 +84,14 @@ p {
 }
 
 .left {
-    width: 35%;
+    /* width: 35%; */
+    min-width: 380px;
     border-right: 1px solid rgb(211, 211, 211);
 }
 
 .right {
-    width: 65%;
+    /* width: 65%; */
+    flex-grow: 1;
     position: relative;
 }
 
@@ -327,7 +329,7 @@ p {
     }
 
     .left {
-        width: 82px;
+        min-width: 82px;
     }
 
     .banner,
