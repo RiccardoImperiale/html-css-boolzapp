@@ -379,17 +379,22 @@ h3,
     }
 
     .emoji_list {
-        padding-top: 1rem;
+        padding-top: .5rem;
+        padding-bottom: -70px;
     }
 
     .emojis {
         overflow-x: hidden;
         scrollbar-width: thin;
-        height: 100px;
+        height: 87px;
         width: 100%;
         display: flex;
         gap: .3rem;
         flex-wrap: wrap;
+
+        & span {
+            cursor: pointer;
+        }
     }
 }
 
