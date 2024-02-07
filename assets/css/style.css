@@ -377,6 +377,18 @@ h3,
         font-size: .8rem;
         color: var(--boolz-secondary-dark);
     }
+
+    .emoji_list {
+        padding-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+
+    .emojis {
+        overflow-x: hidden;
+        height: 100px;
+    }
 }
 
 
