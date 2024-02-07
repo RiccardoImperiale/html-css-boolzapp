@@ -20,9 +20,7 @@
             <!-- contacts -->
             <div class="left">
                 <div class="top">
-                    <div class="avatar">
-                        <img src="./assets/img/avatar_io.jpg" alt="avatar">
-                    </div>
+                    <img src="./assets/img/avatar_io.jpg" alt="avatar">
                     <div class="buttons">
                         <i class="fa-solid fa-circle-notch"></i>
                         <i class="fa-solid fa-message"></i>
@@ -266,15 +264,129 @@
                             <span class="hours">16:13</span>
                         </div>
                     </div>
+                    <!-- sent messages -->
+                    <div class="message sent">
+                        <div class="message_top">
+                            <div class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, aut, consequatur
+                                corporis rem dolor earum perferendis, nam quae minima facilis aliquid quia placeat
+                                perspiciatis odit obcaecati aperiam deleniti voluptate illum.
+                            </div>
+                            <div class="arrow_down">
+                                <i class="fa-solid fa-angle-down"></i>
+                                <ul class="message_options">
+                                    <li>Info messaggio</li>
+                                    <li>Cancella messaggio</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="message_bottom">
+                            <span class="hours">16:13</span>
+                        </div>
+                    </div>
+                    <!-- received messages -->
+                    <div class="message received">
+                        <div class="message_top">
+                            <div class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, aut, consequatur
+                                corporis rem dolor earum perferendis, nam quae minima facilis aliquid quia placeat
+                                perspiciatis odit obcaecati aperiam deleniti voluptate illum.
+                            </div>
+                            <div class="arrow_down">
+                                <i class="fa-solid fa-angle-down"></i>
+                                <ul class="message_options">
+                                    <li>Info messaggio</li>
+                                    <li>Cancella messaggio</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="message_bottom">
+                            <span class="hours">16:13</span>
+                        </div>
+                    </div>
+                    <!-- sent messages -->
+                    <div class="message sent">
+                        <div class="message_top">
+                            <div class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, aut, consequatur
+                                corporis rem dolor earum perferendis, nam quae minima facilis aliquid quia placeat
+                                perspiciatis odit obcaecati aperiam deleniti voluptate illum.
+                            </div>
+                            <div class="arrow_down">
+                                <i class="fa-solid fa-angle-down"></i>
+                                <ul class="message_options">
+                                    <li>Info messaggio</li>
+                                    <li>Cancella messaggio</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="message_bottom">
+                            <span class="hours">16:13</span>
+                        </div>
+                    </div>
+                    <!-- received messages -->
+                    <div class="message received">
+                        <div class="message_top">
+                            <div class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, aut, consequatur
+                                corporis rem dolor earum perferendis, nam quae minima facilis aliquid quia placeat
+                                perspiciatis odit obcaecati aperiam deleniti voluptate illum.
+                            </div>
+                            <div class="arrow_down">
+                                <i class="fa-solid fa-angle-down"></i>
+                                <ul class="message_options">
+                                    <li>Info messaggio</li>
+                                    <li>Cancella messaggio</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="message_bottom">
+                            <span class="hours">16:13</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="bottom">
-                    <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio">
-                    <i class="fa-solid fa-microphone"></i>
+                <div class="bottom_container">
+                    <div class="emoji_open">
+                        <div class="top">
+
+                        </div>
+                        <div class="search">
+                            <input type="text" placeholder="Cerca emoji">
+                        </div>
+                        <div class="emoji">
+                            Faccine e Persone
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <input type="text" placeholder="Scrivi un messaggio">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+    <script>
+        const emojiBtn = document.querySelector('.fa-face-smile');
+        const emojiBox = document.querySelector('.emoji_open');
+        const chat = document.querySelector('.chat');
+
+        emojiBtn.addEventListener('click', function () {
+            if (emojiBox.style.bottom === '70px') {
+                emojiBox.style.bottom = '0'
+                emojiBox.style.height = '70px'
+                chat.style.height = 'calc(100% - 140px)'
+            } else {
+                emojiBox.style.bottom = '70px'
+                emojiBox.style.height = '200px'
+                chat.style.height = 'calc(100% - 320px)'
+            }
+        })
+
+    </script>
 </body>
 
 </html>
