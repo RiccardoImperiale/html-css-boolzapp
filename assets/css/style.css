@@ -225,7 +225,7 @@ h3,
     flex-direction: column;
     gap: 1rem;
     scrollbar-width: thin;
-    transition: 1s;
+    transition: height 1s;
 
     .message_top::after,
     .message_received::after {
@@ -354,7 +354,6 @@ h3,
     background-color: var(--boolz-secondary-lighter);
     border-radius: 1rem 1rem 0 0;
     overflow: hidden;
-    /* transition: height 1s; */
     transition: 1s;
 
     .top {
@@ -362,8 +361,10 @@ h3,
         background-color: var(--boolz-secondary-lighter);
     }
 
-    .search {
+    .search_emoji {
         background-color: var(--boolz-secondary-lighter);
+        height: 50px;
+        padding: .4rem .8rem .4rem .4rem;
 
         & input {
             background-color: #e9e3de;
@@ -376,8 +377,6 @@ h3,
         font-size: .8rem;
         color: var(--boolz-secondary-dark);
     }
-
-
 }
 
 
