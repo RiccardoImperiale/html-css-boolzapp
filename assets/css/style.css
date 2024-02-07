@@ -38,6 +38,10 @@ input {
     height: 100%;
     border: 1px solid var(--boolz-secondary-lighter);
     border-radius: .4rem;
+
+    &:focus-visible {
+        outline: none;
+    }
 }
 
 ::placeholder {
@@ -217,6 +221,13 @@ h3,
     gap: 1rem;
     scrollbar-width: thin;
 
+    .message_top::after,
+    .message_received::after {
+        content: '';
+        position: absolute;
+        top: 0;
+    }
+
     .message {
         padding: 1.2rem 1.2rem .3rem 1.2rem;
         width: 60%;
@@ -227,13 +238,26 @@ h3,
         border-radius: 1rem 0 1rem 1rem;
         background-color: var(--boolz-success);
         align-self: flex-end;
+
+        .message_top::after {
+            right: -20px;
+            border-right: 22px solid transparent;
+            border-top: 18px solid var(--boolz-success);
+        }
     }
 
     .message.received {
         border-radius: 0 1rem 1rem 1rem;
         background-color: white;
+
+        .message_top::after {
+            left: -20px;
+            border-left: 22px solid transparent;
+            border-top: 18px solid white;
+        }
     }
 }
+
 
 .message_top {
     display: flex;
@@ -315,6 +339,15 @@ h3,
         cursor: pointer;
     }
 }
+
+
+
+
+
+
+
+
+
 
 /* Responsive ---------------------------------------------------> */
 
