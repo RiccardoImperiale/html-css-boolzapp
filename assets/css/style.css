@@ -380,14 +380,16 @@ h3,
 
     .emoji_list {
         padding-top: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: .5rem;
     }
 
     .emojis {
         overflow-x: hidden;
+        scrollbar-width: thin;
         height: 100px;
+        width: 100%;
+        display: flex;
+        gap: .3rem;
+        flex-wrap: wrap;
     }
 }
 
